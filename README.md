@@ -9,7 +9,6 @@ https://rules.ectf.mitre.org/2025.
 ## Setup
 Requires:
 * Python >=3.12
-* Docker Desktop
 
 
 ## Layout
