@@ -36,12 +36,6 @@ If you have git, you can use it directly, otherwise, you can use Docker to clone
 git clone https://github.com/ectfmitre/ectf-workshop.git C:\Users\Student\Desktop\workshop
 ```
 
-```powershell
-# with Docker
-docker run -v C:\Users\Student\Desktop\workshop:/workshop alpine/git clone https://github.com/ectfmitre/ectf-workshop.git /workshop
-```
-
-
 ### 2. Install the tools
 
 ```powershell
@@ -50,9 +44,10 @@ python -m pip install .\tools
 
 ```
 
+### 3. Download challenge zip from scoreboard
+Pick a challenge and download its zip file
 
-
-### 3. Flash Firmware
+### 4. Flash Firmware
 We can now flash the firmware onto the boards with:
 
 ```powershell
@@ -66,19 +61,19 @@ should be a blue LED that blinks on and off roughly once per second. You can
 put the board in update mode by holding the button SW1 on the board while you
 plug it in to USB.
 
-### 4. Interact with Decoder
+### 5. Interact with Decoder
 With the decoder flashed, you can now interract with it.
 
 The three commands available are:
 
-#### 4.1 List
+#### 5.1 List
 You can list all subscribed channels with:
 
 ```powershell
 python -m ectf25.tv.list $serial_dev
 ```
 
-#### 4.2 Subscribe
+#### 5.2 Subscribe
 You can subscribe the decoder to a new channel or update the existing channel
 subscription with:
 
@@ -88,7 +83,7 @@ python -m ectf25.tv.subscribe .\always_1.sub $serial_dev
 
 Where `always_1.sub` is the generated subscription.
 
-#### 4.3 Run
+#### 5.3 Run
 Finally, you can run the TV with:
 
 ```powershell
